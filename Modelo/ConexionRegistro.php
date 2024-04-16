@@ -26,7 +26,7 @@ $telefono = $_POST['telefono'];
 $fechaNacimiento = $_POST['fechaNacimiento'];
 
 // Preparar la consulta SQL para insertar los datos en la tabla Usuarios
-$sql = "INSERT INTO Usuario (Nombre, aPaterno, aMaterno, Correo, Contraseña, Telefono, FchNacimiento) VALUES ('$nombre', '$aPaterno', '$aMaterno', '$correo', '$contraseña', '$telefono', '$fechaNacimiento')";
+$sql = "INSERT INTO Usuario (Nombre, aPaterno, aMaterno, Correo, Contrasena, Telefono, FchNacimiento) VALUES ('$nombre', '$aPaterno', '$aMaterno', '$correo', '$contraseña', '$telefono', '$fechaNacimiento')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Registro exitoso";
