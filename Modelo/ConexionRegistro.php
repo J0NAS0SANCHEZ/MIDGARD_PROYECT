@@ -1,12 +1,9 @@
 <?php
 // Establecer conexión con la base de datos
-$servername = "tommy2.heliohost.org"; 
-$username = "ponystation4_admon"; 
-$password = "74e5A.9u7L"; 
-$database = "ponystation4_midgard"; 
+$config = require_once __DIR__ . '../../config.php';
+//Archivo de configuración para evitar la filtración de información
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['database']);
 
 // Verificar conexión
 if ($conn->connect_error) {
