@@ -1,6 +1,6 @@
 <?php
 // Establecer conexión con la base de datos
-$config = require_once __DIR__ . '../config.php';
+$config = require_once __DIR__ . '/../config.php';
 //Archivo de configuración para evitar la filtración de información
 
 $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['database']);
