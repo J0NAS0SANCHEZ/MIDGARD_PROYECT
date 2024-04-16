@@ -1,0 +1,53 @@
+/* Estilos para la columna del formulario */
+.formulario-columna {
+  padding: 200px 50px; /* Espacio alrededor del formulario */
+}
+
+/* Estilos para la columna de la imagen */
+.imagen-columna {
+  background-image: url('https://hips.hearstapps.com/hmg-prod/images/casa-louise-liljencrantz-estocolmo-estilo-nordico-elegante-2-1528459800.jpg'); /* Ruta de tu imagen */
+  background-size: cover; /* Ajustar tamaño de la imagen */
+  border-radius: 100px; /* Redondear los bordes */
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 450px; /* Ajustar la separación hacia abajo */
+  margin-top: 85px; /* Ajustar la separación hacia arriba */
+  
+}
+
+
+/* Estilos para la tarjeta del formulario */
+.card {
+  border-radius: 20px; /* Bordes redondeados */
+}
+
+.card-body {
+  border-radius: 20px; /* Bordes redondeados */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Color de fondo del botón */
+  border-color: #007bff; /* Color del borde del botón */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Cambio de color al pasar el ratón */
+  border-color: #0056b3; /* Cambio de color del borde al pasar el ratón */
+}
+
+/* Estilos para la imagen */
+.imagen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.9s ease; /* Añadir animación */
+}
+
+/* Efecto de escala al pasar el ratón cerca */
+.imagen-columna:hover .imagen {
+  opacity: 0.8; /* Cambia la opacidad al 80% al pasar el ratón cerca */
+}
