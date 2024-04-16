@@ -18,16 +18,18 @@ $nombre = $_POST['nombre'];
 $aPaterno = $_POST['aPaterno'];
 $aMaterno = $_POST['aMaterno'];
 $correo = $_POST['correo'];
-$contraseña = $_POST['contraseña']; // Contraseña en texto plano
+//$contraseña = $_POST['contraseña']; // Contraseña en texto plano
 
 // Encriptar la contraseña
-$contraseña_encriptada = password_hash($contraseña, PASSWORD_DEFAULT);
+//$contraseña_encriptada = password_hash($contraseña, PASSWORD_DEFAULT);
+
+$contraseña = password_hash($_POST['contraseña'], PASSWORD_DEFAULT);
 
 $telefono = $_POST['telefono'];
 $fechaNacimiento = $_POST['fechaNacimiento'];
 
 // Preparar la consulta SQL para insertar los datos en la tabla Usuarios
-$sql = "INSERT INTO Usuario (Nombre, aPaterno, aMaterno, Correo, Contraseña, Telefono, FchNacimiento) VALUES ('$nombre', '$aPaterno', '$aMaterno', '$correo', '$contraseña_encriptada', $telefono, '$fechaNacimiento')";
+$sql = "INSERT INTO Usuario (Nombre, aPaterno, aMaterno, Correo, Contraseña, Telefono, FchNacimiento) VALUES ('$nombre', '$aPaterno', '$aMaterno', '$correo', '$contraseña', '$telefono', '$fechaNacimiento')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Registro exitoso";
@@ -37,4 +39,3 @@ if ($conn->query($sql) === TRUE) {
 
 // Cerrar conexión
 $conn->close();
-?>
