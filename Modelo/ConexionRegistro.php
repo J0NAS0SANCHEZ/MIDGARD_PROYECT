@@ -1,8 +1,5 @@
 <?php
-// Establecer conexión con la base de datos
 $config = require_once __DIR__ . '/../config.php';
-//Archivo de configuración para evitar la filtración de información
-
 $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['database']);
 
 // Verificar conexión
@@ -15,10 +12,6 @@ $nombre = $_POST['nombre'];
 $aPaterno = $_POST['aPaterno'];
 $aMaterno = $_POST['aMaterno'];
 $correo = $_POST['correo'];
-//$contraseña = $_POST['contraseña']; // Contraseña en texto plano
-
-// Encriptar la contraseña
-//$contraseña_encriptada = password_hash($contraseña, PASSWORD_DEFAULT);
 
 $contraseña = password_hash($_POST['contraseña'], PASSWORD_DEFAULT);
 

@@ -34,7 +34,7 @@
                             <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="catalago.php">Catálogo</a>
+                            <a class="nav-link" href="catalogo.php">Catálogo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contactanos</a>

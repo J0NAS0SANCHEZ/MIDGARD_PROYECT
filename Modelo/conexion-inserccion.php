@@ -1,6 +1,6 @@
 <?php
-
-$conexion = new mysqli("tommy2.heliohost.org", "ponystation4_admon", "74e5A.9u7L", "ponystation4_midgard");
+$config = require_once __DIR__ . '/../config.php';
+$conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['database']);
 
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
